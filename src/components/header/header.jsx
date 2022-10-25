@@ -1,13 +1,13 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
-import ME from './../../assets/home.jpg'
+import ME from './../../assets/hnm.png'
 import HeaderSocials from './HeaderSocials'
 
 const header = () => {
   return (
     <header>
-      <div className="conatiner header__container">
+      <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Epa Tys</h1>
         <h5 className='text-light'>Fullstack Developer</h5>
