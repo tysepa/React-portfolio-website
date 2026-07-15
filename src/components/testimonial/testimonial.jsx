@@ -3,9 +3,8 @@ import './testimonial.css'
 import AVTR1 from "./../../assets/avatar.jpg"
 import AVTR2 from "./../../assets/avatar1.jpg"
 import AVTR3 from "./../../assets/avatar2.jpg"
-import AVTR4 from "./../../assets/avatar3.jpg"
 
-import { Navigation, Pagination, Scrollbar, Ally } from 'swiper'
+import { Pagination } from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,23 +14,18 @@ import 'swiper/css/scrollbar';
 const data =[
   {
     avatar: AVTR1,
-    name:'Tina Snow',
-    review:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit tempore enim  consequuntur sapiente corporis tenetur quod! Magni placeat ab dolorem dolores accusamus maiores, nam assumenda doloremque repudiandae quia tenetur dignissimos.'
+    name:'Mr. MUGABE N. Gabriel',
+    review:'Epaphrodis is an exceptional software developer and IT professional. His dedication to mastering Web Technologies was highly evident during his academic course at the University of Rwanda, demonstrating excellence in JavaScript, React, and Node.js.'
   },
   {
     avatar: AVTR2,
-    name:'Tina Snow',
-    review:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit tempore enim  consequuntur sapiente corporis tenetur quod! Magni placeat ab dolorem dolores accusamus maiores, nam assumenda doloremque repudiandae quia tenetur dignissimos.'
+    name:'Mr. NSENGIYUMVA Grégoire',
+    review:'During his time handling network setups and IT troubleshooting, Epaphrodis demonstrated great technical problem-solving skills and a strong commitment to quality. He is reliable, proactive, and highly professional.'
   },
   {
     avatar: AVTR3,
-    name:'Tina Snow',
-    review:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit tempore enim  consequuntur sapiente corporis tenetur quod! Magni placeat ab dolorem dolores accusamus maiores, nam assumenda doloremque repudiandae quia tenetur dignissimos.'
-  },
-  {
-    avatar: AVTR4,
-    name:'Tina Snow',
-    review:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit tempore enim  consequuntur sapiente corporis tenetur quod! Magni placeat ab dolorem dolores accusamus maiores, nam assumenda doloremque repudiandae quia tenetur dignissimos.'
+    name:'Mr. Mwibutsa Frolibert',
+    review:'Epaphrodis is a talented full-stack developer with solid skills. His ability to translate complex design mockups into functional React applications and construct robust backend Node.js APIs is highly commendable.'
   }
 ]
 
@@ -55,7 +49,7 @@ const testimonial = () => {
           return(
             <SwiperSlide key={index} className='testimonial'>
             <div className="client__avatar">
-              <img src={avatar} />
+              <img src={avatar} alt={name} />
             </div>
             <h5 className='client__name'>{name}</h5>
               <small className='client__review'>

@@ -1,54 +1,38 @@
 import React from "react";
 import "./Portfolio.css";
-import IMG1 from "../../assets/portfolio1.webp";
-import IMG2 from "../../assets/portfolio2.webp";
-import IMG3 from "../../assets/portfolio3.webp";
-import IMG4 from "../../assets/portfolio4.webp";
-import IMG5 from "../../assets/portfolio5.jpeg";
-import IMG6 from "../../assets/portfolio6.webp";
+import IMG1 from "../../assets/portfolio1.PNG";
+import IMG2 from "../../assets/portfolio2.PNG";
+import IMG3 from "../../assets/portfolio3.PNG";
+import IMG4 from "../../assets/portfolio4.PNG";
 
 const data =[
   {
     id:1,
     image: IMG1,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
+    title: 'Suchi_DimSum - Golden Dragon Sushi Delivery Platform',
+    github:'https://github.com/tysepa/Suchi_DimSum',
+    demo:'https://frontend-six-xi-27.vercel.app/'
   },
   {
     id:2,
     image: IMG2,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
+    title: 'Bride - Elegant Wedding Rental & Booking Website',
+    github:'https://github.com/tysepa/Bride',
+    demo:'https://project-89v4w.vercel.app/'
   },
   {
     id:3,
     image: IMG3,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
+    title: 'Nepo - Senior Electrical Infrastructure Portfolio',
+    github:'https://github.com/tysepa/Electrical',
+    demo:'https://electrical-cyan.vercel.app/'
   },
   {
     id:4,
     image: IMG4,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
-  },
-  {
-    id:5,
-    image: IMG5,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
-  },
-  {
-    id:6,
-    image: IMG6,
-    title: 'Crypto Currency Dashboard & Financial visualization',
-    github:'https://github.com',
-    demo:'https://dribbble.com/shots/19314530-Data-visualization-on-the-map'
+    title: 'Sample la creola  Developer Website',
+    github:'https://github.com/tysepa/lacre',
+    demo:'https://azzurri-club-and-restaurant.vercel.app/'
   }
 ]
 
@@ -78,6 +62,7 @@ const Portfolio = () => {
               href={demo}
               className="btn btn-primary"
               target="_blank"
+              rel="noreferrer"
             >
               Live Demo
             </a>

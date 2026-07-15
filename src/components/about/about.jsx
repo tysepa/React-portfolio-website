@@ -37,12 +37,7 @@ const about = () => {
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur,
-             adipisicing elit. Ipsa exercitationem 
-             officia modi quam, harum sint impedit 
-             vero provident voluptates assumenda,
-              quia maxime? Nihil, aperiam itaque nobis 
-              exercitationem neque reiciendis odit?
+            I am a software developer with a Bachelor’s Degree in Information Technology and Business Management. As a natural team player, I am highly skilled in computer programming, web application development, and network administration. I have extensive experience building applications using JavaScript, React, and Node.js, alongside UI/UX design capabilities. I possess excellent communication and interpersonal skills, and I am bilingual in English and French, with workable Chinese.
           </p>
            <a href="#contact" className='btn btn-primary'> Let's Talk</a>
 
