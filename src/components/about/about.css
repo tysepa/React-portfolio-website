@@ -95,7 +95,13 @@
     }
     .about__me{
         width: 65%;
+        height: auto;
+        aspect-ratio: 1/1;
         margin: 0 auto 3rem;
+    }
+    .me-ab {
+        width: 100%;
+        height: auto;
     }
 
     .about__cards {
@@ -106,6 +112,6 @@
         text-align: center;
     }
     .about__content p {
-        margin: 1.5rem
+        margin: 1.5rem 0 2rem;
     }
 }
