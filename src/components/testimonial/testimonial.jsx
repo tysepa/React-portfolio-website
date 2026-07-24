@@ -1,7 +1,7 @@
 import React from 'react'
 import './testimonial.css'
 import AVTR1 from "./../../assets/avatar.jpg"
-import AVTR2 from "./../../assets/gregoire.jpg"
+import AVTR2 from "./../../assets/gregoire.JPG"
 import AVTR3 from "./../../assets/mwibutsa.jpg"
 
 import { Pagination } from 'swiper'
