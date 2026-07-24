@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 30% 55%;
     gap: 15%;
-    margin: 5rem;
+    margin: 5rem auto;
 }
 .about__me{
     width: 66%;
@@ -90,6 +90,9 @@
 
 
 @media screen and (max-width: 600px) {
+    .about__container {
+        margin: 2rem auto;
+    }
     .about__me{
         width: 65%;
         margin: 0 auto 3rem;
@@ -105,5 +108,4 @@
     .about__content p {
         margin: 1.5rem
     }
-    
 }

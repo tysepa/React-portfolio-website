@@ -30,17 +30,12 @@ const App = () => {
 
   return (
     <>
-       <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-         {theme === 'dark' ? <FiSun /> : <FiMoon />}
-       </button>
-       <div className="language-selector">
-         <select value={language} onChange={(e) => changeLanguage(e.target.value)} aria-label="Change Language">
-           <option value="en">English</option>
-           <option value="fr">Français</option>
-           <option value="de">Deutsch</option>
-         </select>
-       </div>
-       <Header />
+       <Header 
+         theme={theme} 
+         toggleTheme={toggleTheme} 
+         language={language} 
+         changeLanguage={changeLanguage} 
+       />
        <Nav />
        <About />
        <Experience />
@@ -49,7 +44,6 @@ const App = () => {
        <Testimonials />
        <Contact />
        <Footer />
-
     </>
   )
 }
