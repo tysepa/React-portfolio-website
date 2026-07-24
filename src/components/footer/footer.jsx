@@ -3,20 +3,22 @@ import './footer.css'
 import {FaFacebookF} from 'react-icons/fa'
 import {FiInstagram} from 'react-icons/fi'
 import {IoLogoTwitter } from 'react-icons/io'
+import { useLanguage } from '../../LanguageContext'
 
 
-const footer = () => {
+const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer >
       <a href="#home" className='footer__logo'>Epaphrodis</a>
       <ul className='permalinks'>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonial">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">{t('homeLink')}</a></li>
+        <li><a href="#about">{t('aboutLink')}</a></li>
+        <li><a href="#experience">{t('experienceLink')}</a></li>
+        <li><a href="#services">{t('servicesLink')}</a></li>
+        <li><a href="#portfolio">{t('portfolioLink')}</a></li>
+        <li><a href="#testimonial">{t('testimonialsLink')}</a></li>
+        <li><a href="#contact">{t('contactLink')}</a></li>
 
       </ul>
       <div className="footer__socials">
@@ -26,10 +28,10 @@ const footer = () => {
       </div>
       
       <div className="footer__copyright">
-        <small>&copy; TUYISUNGE Epaphrodis. All rights reserved.</small>
+        <small>{t('copyright')}</small>
       </div>
     </footer>
   )
 }
 
-export default footer
+export default Footer

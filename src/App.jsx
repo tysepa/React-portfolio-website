@@ -9,12 +9,15 @@ import Testimonials from './components/testimonial/testimonial'
 import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
 import { FiSun, FiMoon } from 'react-icons/fi'
+import { useLanguage } from './LanguageContext'
 
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark';
   });
+
+  const { language, changeLanguage } = useLanguage();
 
   useEffect(() => {
     document.body.className = theme === 'light' ? 'light-theme' : '';
@@ -30,6 +33,13 @@ const App = () => {
        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
          {theme === 'dark' ? <FiSun /> : <FiMoon />}
        </button>
+       <div className="language-selector">
+         <select value={language} onChange={(e) => changeLanguage(e.target.value)} aria-label="Change Language">
+           <option value="en">English</option>
+           <option value="fr">Français</option>
+           <option value="de">Deutsch</option>
+         </select>
+       </div>
        <Header />
        <Nav />
        <About />

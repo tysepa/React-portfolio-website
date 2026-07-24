@@ -4,33 +4,34 @@ import IMG1 from "../../assets/portfolio1.PNG";
 import IMG2 from "../../assets/portfolio2.PNG";
 import IMG3 from "../../assets/portfolio3.PNG";
 import IMG4 from "../../assets/portfolio4.PNG";
+import { useLanguage } from "../../LanguageContext";
 
 const data =[
   {
     id:1,
     image: IMG1,
-    title: 'Suchi_DimSum - Golden Dragon Sushi Delivery Platform',
+    titleKey: 'sushiTitle',
     github:'https://github.com/tysepa/Suchi_DimSum',
     demo:'https://frontend-six-xi-27.vercel.app/'
   },
   {
     id:2,
     image: IMG2,
-    title: 'Bride - Elegant Wedding Rental & Booking Website',
+    titleKey: 'brideTitle',
     github:'https://github.com/tysepa/Bride',
     demo:'https://project-89v4w.vercel.app/'
   },
   {
     id:3,
     image: IMG3,
-    title: 'Nepo - Senior Electrical Infrastructure Portfolio',
+    titleKey: 'nepoTitle',
     github:'https://github.com/tysepa/Electrical',
     demo:'https://electrical-cyan.vercel.app/'
   },
   {
     id:4,
     image: IMG4,
-    title: 'Sample la creola  Developer Website',
+    titleKey: 'portfolioWebTitle',
     github:'https://github.com/tysepa/lacre',
     demo:'https://azzurri-club-and-restaurant.vercel.app/'
   }
@@ -40,20 +41,21 @@ const data =[
 
 
 const Portfolio = () => {
+  const { t } = useLanguage();
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h5>{t('portfolioSub')}</h5>
+      <h2>{t('portfolioTitle')}</h2>
 
       <div className="container portfolio__container">
        {
-         data.map(({id, image,title,github, demo})=>{
+         data.map(({id, image, titleKey, github, demo})=>{
            return(
           <article key={id} className="portfolio__item">
           <div className="portfolio__item-image">
-            <img src={image} alt={title} />
+            <img src={image} alt={t(titleKey)} />
           </div>
-          <h3>{title}</h3>
+          <h3>{t(titleKey)}</h3>
           <div className="portfolio__item-cta">
             <a href={github} className="btn">
               Github

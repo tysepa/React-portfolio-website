@@ -3,6 +3,7 @@ import './testimonial.css'
 import AVTR1 from "./../../assets/avatar.jpg"
 import AVTR2 from "./../../assets/gregoire.JPG"
 import AVTR3 from "./../../assets/mwibutsa.jpg"
+import { useLanguage } from '../../LanguageContext'
 
 import { Pagination } from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -15,27 +16,28 @@ const data =[
   {
     avatar: AVTR1,
     name:'Mr. MUGABE N. Gabriel',
-    review:'Epaphrodis is an exceptional software developer and IT professional. His dedication to mastering Web Technologies was highly evident during his academic course at the University of Rwanda, demonstrating excellence in JavaScript, React, and Node.js.'
+    reviewKey: 'mugabeReview'
   },
   {
     avatar: AVTR2,
     name:'Mr. NSENGIYUMVA Grégoire',
-    review:'During his time handling network setups and IT troubleshooting, Epaphrodis demonstrated great technical problem-solving skills and a strong commitment to quality. He is reliable, proactive, and highly professional.'
+    reviewKey: 'gregoireReview'
   },
   {
     avatar: AVTR3,
     name:'Mr. Mwibutsa Frolibert',
-    review:'Epaphrodis is a talented full-stack developer with solid skills. His ability to translate complex design mockups into functional React applications and construct robust backend Node.js APIs is highly commendable.'
+    reviewKey: 'mwibutsaReview'
   }
 ]
 
 
 
-const testimonial = () => {
+const Testimonial = () => {
+  const { t } = useLanguage();
   return (
     <section id='testimonial'>
-      <h5>Review From clients</h5>
-      <h2>Testimonial</h2>
+      <h5>{t('testimonialSub')}</h5>
+      <h2>{t('testimonialTitle')}</h2>
       <Swiper className="container testimonials__container"
       modules={[ Pagination]}
       spaceBetween={40}
@@ -45,7 +47,7 @@ const testimonial = () => {
      
       >
       {
-        data.map(({avatar,name, review}, index)=>{
+        data.map(({avatar, name, reviewKey}, index)=>{
           return(
             <SwiperSlide key={index} className='testimonial'>
             <div className="client__avatar">
@@ -53,7 +55,7 @@ const testimonial = () => {
             </div>
             <h5 className='client__name'>{name}</h5>
               <small className='client__review'>
-               { review}
+               {t(reviewKey)}
               </small>
           </SwiperSlide>
           )
@@ -64,4 +66,4 @@ const testimonial = () => {
   )
 }
 
-export default testimonial
+export default Testimonial
