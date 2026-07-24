@@ -12,7 +12,7 @@ const data =[
     image: IMG1,
     titleKey: 'sushiTitle',
     github:'https://github.com/tysepa/Suchi_DimSum',
-    demo:'https://frontend-six-xi-27.vercel.app/'
+    demo:'https://app-six-sage-47.vercel.app/'
   },
   {
     id:2,
