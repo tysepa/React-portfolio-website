@@ -1,8 +1,8 @@
 import React from 'react'
 import './testimonial.css'
 import AVTR1 from "./../../assets/avatar.jpg"
-import AVTR2 from "./../../assets/avatar1.jpg"
-import AVTR3 from "./../../assets/avatar2.jpg"
+import AVTR2 from "./../../assets/gregoire.jpg"
+import AVTR3 from "./../../assets/mwibutsa.jpg"
 
 import { Pagination } from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react';
